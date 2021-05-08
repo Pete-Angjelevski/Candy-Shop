@@ -1,4 +1,4 @@
-const checkoutReducer = (state=[], action) => {
+const checkoutReducer = (state: any[] =[], action: any) => {
   switch (action.type) {
 
 

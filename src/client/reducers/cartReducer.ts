@@ -1,6 +1,6 @@
 
 
-const cartReducer = (state=[], action) => {
+const cartReducer = (state: any[] =[], action: any) => {
   switch (action.type) {
 
 
