@@ -1,21 +1,33 @@
 import * as React from 'react';
 
+//  DATA
+import candyData from '../../data/candy'
+
+// COMPONENTS
+import Header from './Header'
+import CandyList from './CandyList'
 
 
-interface AppProps {}
-
-
-const App = (props: AppProps) => {
+export default function App  () {
 
 
 	return (
-		<main className="container my-5">
-			<h1 className="text-primary text-center">Hello!</h1>
-		</main>
+	<>
+		<Header />
+		<CandyList candy={candyData.candy} />
+		
+	</>
 	);
 };
 
 
+interface appProps {
+	id: number,
+	name: string,
+	price: number,
+	vegan: boolean,
+	gf: boolean,
+	description: string
+}	
 
 
-export default App;

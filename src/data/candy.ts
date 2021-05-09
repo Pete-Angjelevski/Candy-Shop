@@ -1,5 +1,11 @@
-export default {
-  beers: [
+ let candyData: {
+    id: number
+    name: string
+    price: number
+    vegan: boolean
+    gf: boolean
+    description: string 
+ }[] = [
     {
       id: 1,
       name: 'Candy Cane',
@@ -100,4 +106,5 @@ export default {
       description: ''
     }
   ]
-}
+
+  export default candyData
