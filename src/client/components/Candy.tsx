@@ -1,6 +1,9 @@
 
 import * as React from 'react'
 
+import { addToCart } from '../actions/cartActions'
+
+
 interface candyProps {
   id: number,
 	name: string,
@@ -22,6 +25,9 @@ export default function Candy (props: { details: candyProps}) {
         <p>{description}</p>
         <p>Vegan: {vegan}</p>
         <p>Gluten Free: {gf}</p>
+        <button>Add to Cart</button>
       </div>
     )
  }
+
+ 
