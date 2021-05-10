@@ -1,11 +1,7 @@
- let candyData: {
-    id: number
-    name: string
-    price: number
-    vegan: boolean
-    gf: boolean
-    description: string 
- }[] = [
+import {CandyType} from '../client/types/appSpecificTypes'
+ 
+ 
+export const candyData: CandyType[]  = [
     {
       id: 1,
       name: 'Candy Cane',
@@ -107,4 +103,4 @@
     }
   ]
 
-  export default candyData
+ 

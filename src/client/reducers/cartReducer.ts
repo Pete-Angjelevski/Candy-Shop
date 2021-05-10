@@ -1,9 +1,17 @@
-import { cartActionTypes } from '../actions/cartActions'
+import { ADD_TO_CART } from '../actions/cartActions'
+import { CandyData } from '../../data/candy'
 
 
 
-const cartReducer = (state: any[] =[], action: any) => {
-  const { ADD_TO_CART } = cartActionTypes
+const intitialState = {
+  cart: []
+}
+
+type Action = {type: "ADD_TO_CART", id: number, name: string, price: number, vegan: boolean, gf: boolean, description: string}
+
+
+const cartReducer = (state: CandyData = intitialState, action: Action ) => {
+  ADD_TO_CART
 
 
   switch (action.type) {

@@ -3,8 +3,9 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import reducers from './reducers'
 
-const store = createStore(reducers,
+export const store = createStore(reducers,
   composeWithDevTools()
 )
 
-export default store
+export type AppDispatch = typeof store.dispatch
+

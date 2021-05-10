@@ -1,16 +1,13 @@
 import * as React from 'react'
 import {useState} from 'react'
-import { connect } from 'react-redux'
-
-
-interface propsCart {}[]
-
-type USitems = [ ]
+import { useSelector } from 'react-redux'
 
 
 
-function Cart (props: {cart: propsCart}) {
-  const [items, setItems ] = useState<USitems>(props.cart)
+function Cart () {
+  const cart = useSelector<>((state) => state.cart)
+
+  const [items, setItems ] = useState(cart)
 
 
   return (
@@ -18,7 +15,7 @@ function Cart (props: {cart: propsCart}) {
       <table>
         <thead>
           <tr>
-            <td>Beer</td>
+            <td>Candy</td>
             <td>Quantity</td>
             <td>Cost</td>
             <td>Remove</td>
@@ -31,7 +28,7 @@ function Cart (props: {cart: propsCart}) {
                 <td>{name}</td>
                 <td><input className='update-input' value={quantity} /></td>
                 <td>{price}</td>
-                <td><button onClick={() => handleDelete(id)}><span className='fa fa-trash fa-2x' /></button></td>
+                <td><button><span/></button></td>
               </tr>
             )
           })}
@@ -42,11 +39,4 @@ function Cart (props: {cart: propsCart}) {
 }
 
 
-function mapStateToProps (state: any){
-
-return {
-  cart: state.cart
-}
-}
-
-export default connect(mapStateToProps)(Cart)
+export default Cart

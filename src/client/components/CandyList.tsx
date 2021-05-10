@@ -1,30 +1,22 @@
  import * as React from 'react'
-
+ import { CandyType} from '../types/appSpecificTypes'
 
 // COMPONENTS
 
 import Candy from './Candy'
-
-type candyListProps = any[]
-
-interface item {
-  id: number,
-	name: string,
-	price: number,
-	vegan: boolean,
-	gf: boolean,
-	description: string
-}
+import {candyData} from '../../data/candy'
 
 
- export default function CandyList (props: {candy: candyListProps}) {
+
+
+ export default function CandyList () {
     return (
         <div>
           <ul>
-            {props.candy.map((item: item) => {
+            {candyData.map((item: CandyType) => {
               return (
                 <li key={item.id}>
-                  {<Candy details={item} />}
+                {<Candy details={item} />}
                 </li>
               )
             })}
