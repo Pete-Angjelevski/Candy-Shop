@@ -1,5 +1,9 @@
 import { ADD_TO_CART } from '../actions/cartActions'
-import { CandyData } from '../../data/candy'
+import { CartActionTypes } from '../types/actionTypes'
+import { CandyType } from '../types/appSpecificTypes' 
+ 
+
+const cartReducerDefaultState: CandyType[] = []
 
 
 
@@ -10,7 +14,7 @@ const intitialState = {
 type Action = {type: "ADD_TO_CART", id: number, name: string, price: number, vegan: boolean, gf: boolean, description: string}
 
 
-const cartReducer = (state: CandyData = intitialState, action: Action ) => {
+const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ): any => {
   ADD_TO_CART
 
 

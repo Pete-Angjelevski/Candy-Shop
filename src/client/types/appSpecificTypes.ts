@@ -1,3 +1,5 @@
+
+
 export interface CandyType {
   id: number,
 	name: string,

@@ -4,7 +4,9 @@ import checkout from './checkoutReducer'
 
 
 
-export default combineReducers({
+export const rootReducer = combineReducers({
   cart,
   checkout
 })
+
+export type AppState = ReturnType<typeof rootReducer>
