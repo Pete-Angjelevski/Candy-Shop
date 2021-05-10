@@ -14,20 +14,12 @@ export default function App  () {
 	return (
 	<>
 		<Header />
-		<CandyList candy={candyData.candy} />
+		<CandyList candy={candyData} />
 		
 	</>
 	);
 };
 
 
-interface appProps {
-	id: number,
-	name: string,
-	price: number,
-	vegan: boolean,
-	gf: boolean,
-	description: string
-}	
 
 
