@@ -34,7 +34,7 @@ const Cart: React.FC<CartProps> = () => {
                 <td>{name}</td>
                 <td><input className='update-input' value={quantity} /></td>
                 <td>{price}</td>
-                <td><button></button></td>
+                <td><button>Remove</button></td>
               </tr>
             )
           })}

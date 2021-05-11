@@ -103,5 +103,4 @@ import {CandyType} from '../client/types/appSpecificTypes'
   ]
 
 
-  export { candyData }
- 
+  export default candyData

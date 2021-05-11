@@ -4,7 +4,7 @@
 // COMPONENTS
 
 import Candy from './Candy'
-import {candyData} from '../../data/candy'
+import candyData from '../../data/candy'
 
 
 
