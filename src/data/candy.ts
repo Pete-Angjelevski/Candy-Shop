@@ -1,7 +1,6 @@
 import {CandyType} from '../client/types/appSpecificTypes'
  
- 
-export const candyData: CandyType[]  = [
+   const candyData: CandyType[]  = [
     {
       id: 1,
       name: 'Candy Cane',
@@ -103,4 +102,6 @@ export const candyData: CandyType[]  = [
     }
   ]
 
+
+  export { candyData }
  

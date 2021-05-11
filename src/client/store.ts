@@ -11,7 +11,7 @@ export const store = createStore(
   
 )
 
-type AppState = ReturnType<typeof rootReducer>
+
 
 export const dispatch: Dispatch<AppActionTypes> = store.dispatch; 
 

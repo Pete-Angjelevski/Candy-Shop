@@ -7,5 +7,5 @@ export interface CandyType {
 	vegan: boolean,
 	gf: boolean,
 	description: string,
-	quantity: number
+	quantity?: number
 }

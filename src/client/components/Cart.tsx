@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {useState} from 'react'
-
+import { useSelector } from 'react-redux'
 import { CandyType } from '../types/appSpecificTypes'
 
 
@@ -8,15 +8,12 @@ interface CartProps {
 
 }
 
-interface CartState {
-
-}
 
 
 const Cart: React.FC<CartProps> = () => {
+  const cart = useSelector((state: any) => state.cart)
 
-
-  const [items, setItems ] = useState<CandyType[]>([])
+  const [items, setItems ] = useState<CandyType[]>(cart)
 
 
   return (
