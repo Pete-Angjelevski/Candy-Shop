@@ -1,8 +1,10 @@
 import * as React from 'react'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import { CandyType } from '../types/appSpecificTypes'
-
+import { deleteItem } from '../actions/cartActions'
+import { dispatch } from '../store'
+import { connect } from 'react-redux'
 
 interface CartProps {
 
@@ -13,7 +15,18 @@ interface CartProps {
 const Cart: React.FC<CartProps> = () => {
   const cart = useSelector((state: any) => state.cart)
 
+  let [ total, setTotal ] = useState<number>(0)
+
   const [items, setItems ] = useState<CandyType[]>(cart)
+
+  useEffect((): void => {
+    setItems(cart)
+      
+  },[cart] )
+
+  function handleDelete(id: number): void {
+    dispatch(deleteItem(id))
+  }
 
 
   return (
@@ -34,15 +47,18 @@ const Cart: React.FC<CartProps> = () => {
                 <td>{name}</td>
                 <td><input className='update-input' value={quantity} /></td>
                 <td>{price}</td>
-                <td><button>Remove</button></td>
+                <td><button onClick={() => handleDelete(id)}>Remove</button></td>
               </tr>
             )
           })}
         </tbody>
       </table>
+      <div>
+        <p>Total: {total}</p>
+      </div>
     </div>
   )
 }
 
 
-export default Cart
+export default connect()(Cart)
