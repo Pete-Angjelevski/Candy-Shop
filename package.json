@@ -30,6 +30,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "superagent": "^6.1.0",

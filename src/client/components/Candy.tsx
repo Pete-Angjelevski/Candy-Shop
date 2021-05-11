@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { addToCart } from '../actions/cartActions'
-import { useAppDispatch } from '../hooks'
-import { Dispatch } from 'redux'
+import { dispatch } from '../store'
 
 
 
@@ -13,16 +12,20 @@ interface candyProps {
 	price: number,
 	vegan: boolean,
 	gf: boolean,
-	description: string
+	description: string,
 }
 
 
 function Candy (props: { details: candyProps}) {
-    const dispatch = useAppDispatch<Dispatch<>>()
+  
+
 
     const {id, name, price, vegan, gf, description} = props.details
 
 
+    function handleAdd () {
+      dispatch(addToCart(id, name, price))
+    }
 
     return (
       <div>
@@ -31,7 +34,7 @@ function Candy (props: { details: candyProps}) {
         <p>{description}</p>
         { vegan ? <p>Vegan: ✔</p> : <p>Vegan: ✖  </p> }
         { gf ? <p>Gluten Free: ✔</p> : <p>Gluten Free: ✖  </p> }
-        <button onClick={() => dispatch(addToCart(id, name, price))}>Add to Cart</button>
+        <button onClick={handleAdd}>Add to Cart</button>
       </div>
     )
  }
