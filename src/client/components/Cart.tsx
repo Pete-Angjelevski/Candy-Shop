@@ -5,6 +5,7 @@ import { CandyType } from '../types/appSpecificTypes'
 import { deleteItem } from '../actions/cartActions'
 import { dispatch } from '../store'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 interface CartProps {
 
@@ -55,6 +56,9 @@ const Cart: React.FC<CartProps> = () => {
       </table>
       <div>
         <p>Total: {total}</p>
+        <Link to="/checkout">
+          <button>Proceed to Checkout</button>
+        </Link>
       </div>
     </div>
   )
