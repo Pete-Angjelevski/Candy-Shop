@@ -1,9 +1,9 @@
 import { ADD_TO_CART, DELETE_ITEM, EDIT_ITEM } from '../actions/cartActions'
 import { CartActionTypes } from '../types/actionTypes'
-import { CandyType } from '../types/appSpecificTypes' 
+import { CartType } from '../types/appSpecificTypes' 
  
 
-const cartReducerDefaultState: Partial<CandyType[]> = []
+const cartReducerDefaultState: Partial<CartType[]> = []
 
 const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ): any => {
   ADD_TO_CART

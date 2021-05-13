@@ -1,6 +1,9 @@
 import { ADD_TO_CART, EDIT_ITEM, DELETE_ITEM } from '../actions/cartActions'
-import { CandyType } from './appSpecificTypes'
+import { ADD_TO_CHECKOUT } from '../actions/checkoutActions'
+import { CandyType, CartType } from './appSpecificTypes'
 
+
+// ----------------- CART ACTION TYPES ------------------------
 export interface addToCartType {
   type: typeof ADD_TO_CART
   id: number
@@ -20,7 +23,17 @@ export interface deleteItemType {
   id: number
 }
 
+// ------------------- CHECKOUT ACTION TYPES ----------------
+
+export interface addToCheckout {
+  type: typeof ADD_TO_CHECKOUT,
+  fullCart: CartType[]
+}
+
+
 
 export type CartActionTypes = addToCartType | editItemType | deleteItemType
 
-export type AppActionTypes = CartActionTypes
+export type CheckoutActionTypes = addToCheckout
+
+export type AppActionTypes = CartActionTypes | CheckoutActionTypes

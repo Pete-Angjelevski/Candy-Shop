@@ -1,12 +1,12 @@
 import * as React from 'react'
 import {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
-import { CandyType } from '../types/appSpecificTypes'
+import { CartType } from '../types/appSpecificTypes'
 import { deleteItem, editItem } from '../actions/cartActions'
 import { dispatch } from '../store'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import { addToCheckout } from '../actions/checkoutActions'
 
 interface CartProps {
 
@@ -18,7 +18,7 @@ const Cart: React.FC<CartProps> = () => {
   const cart = useSelector((state: any) => state.cart)
 
   let [ total, setTotal ] = useState<number>(0)
-  const [items, setItems ] = useState<CandyType[]>(cart)
+  const [items, setItems ] = useState<CartType[]>(cart)
 
   useEffect((): void => {
     setItems(cart)
@@ -30,7 +30,7 @@ const Cart: React.FC<CartProps> = () => {
   }
 
   function handleEditChange (id: number, e: React.ChangeEvent<HTMLInputElement>): void {
-      const arr: CandyType[] = cart.map((item: CandyType) => item.id === id
+      const arr: CartType[] = cart.map((item: CartType) => item.id === id
       ? { id: item.id, 
           name: item.name, 
           price: (item.price/ item.quantity) * Number(e.target.value), 
@@ -41,8 +41,11 @@ const Cart: React.FC<CartProps> = () => {
   }
 
   function setEdit (): void {
-    console.log(items)
     dispatch(editItem(items))
+  }
+
+  function handleCheckoutClick(): void {
+    dispatch(addToCheckout(items))
   }
 
 
@@ -75,7 +78,7 @@ const Cart: React.FC<CartProps> = () => {
       <div>
         <p>Total: {total}</p>
         <Link to="/checkout">
-          <button>Proceed to Checkout</button>
+          <button onClick={handleCheckoutClick}>Proceed to Checkout</button>
         </Link>
       </div>
     </div>
