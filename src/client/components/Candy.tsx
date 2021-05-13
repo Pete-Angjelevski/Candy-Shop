@@ -23,7 +23,7 @@ function Candy (props: { details: CandyType}) {
     return (
       <div>
         <p>{name}</p>
-        <p>Price: {price}</p>
+        <p>Price: ${price}</p>
         <p>{description}</p>
         { vegan ? <p>Vegan: ✔</p> : <p>Vegan: ✖  </p> }
         { gf ? <p>Gluten Free: ✔</p> : <p>Gluten Free: ✖  </p> }
