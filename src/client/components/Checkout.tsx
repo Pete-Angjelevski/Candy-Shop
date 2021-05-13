@@ -11,32 +11,30 @@ interface CheckoutProps {
 
 const Checkout: React.FC<CheckoutProps> = () => {
 
-  const checkout = useSelector((state: any) => state.checkout)
-  const [items, setItems] = useState<CartType[]>(checkout)
+  const {fullCart, total} = useSelector((state: any) => state.checkout)
+  const [items, setItems] = useState<CartType[]>(fullCart)
 
   useEffect(() => {
-    setItems(checkout)
-  }, [checkout] )
+    setItems(fullCart)
+  }, [fullCart] )
 
 
   return (
     <div>
-      <h1>Order Summary:</h1>
+      <h2>*Also add payment service portal with PayPal*</h2>
+      <h3>Order Summary:</h3>
       <ul>
-        {
-          checkout 
-          ? items.map((item: CartType) => {
+      { 
+        items.map((item: CartType) => {
             return (<li key={item.id}>
               <p>{item.name}</p>
               <p>${item.price}</p>
               <p>QTY: {item.quantity}</p>
             </li>)
-          })
-          : <li>
-              <p>Nothing to checkout yet, please select form our shop</p>
-            </li>
+          })   
         }
       </ul>
+      <p>Total: {total}</p>
     </div>
   )
 }

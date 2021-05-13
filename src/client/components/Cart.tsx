@@ -22,7 +22,12 @@ const Cart: React.FC<CartProps> = () => {
 
   useEffect((): void => {
     setItems(cart)
-      
+    const arr = items.map((item: CartType) => item.price)
+    const reducer = (accumulator: number, currentValue: number): number => accumulator + currentValue
+    const totalPrice = arr.reduce(reducer)
+    
+    setTotal(totalPrice)
+    
   },[cart] )
 
   function handleDelete(id: number): void {
@@ -45,7 +50,7 @@ const Cart: React.FC<CartProps> = () => {
   }
 
   function handleCheckoutClick(): void {
-    dispatch(addToCheckout(items))
+    dispatch(addToCheckout(items, total))
   }
 
 
@@ -57,6 +62,7 @@ const Cart: React.FC<CartProps> = () => {
             <td>Candy</td>
             <td>Quantity</td>
             <td>Cost</td>
+            <td>Update QTY</td>
             <td>Remove</td>
           </tr>
         </thead>

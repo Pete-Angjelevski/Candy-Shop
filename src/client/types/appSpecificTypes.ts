@@ -17,3 +17,7 @@ export interface CartType {
 	quantity: number
 }
 
+export interface CheckoutType {
+	fullCart: CartType[],
+	total: number
+}

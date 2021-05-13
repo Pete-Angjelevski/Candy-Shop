@@ -1,15 +1,18 @@
-import { CartType} from '../types/appSpecificTypes'
+import { CheckoutType} from '../types/appSpecificTypes'
 import { CheckoutActionTypes } from '../types/actionTypes'
 import { ADD_TO_CHECKOUT } from '../actions/checkoutActions'
 
-const checkoutReducerDefaultState: CartType[] = []
+const checkoutReducerDefaultState: CheckoutType = {}
 
 
-const checkoutReducer = (state = checkoutReducerDefaultState, action: CheckoutActionTypes): CartType[] => {
+const checkoutReducer = (state = checkoutReducerDefaultState, action: CheckoutActionTypes): CheckoutType => {
   switch (action.type) {
 
     case ADD_TO_CHECKOUT:
-      return action.fullCart
+      return { 
+        fullCart: action.fullCart,
+        total: action.total
+      }
 
     default:
       return state

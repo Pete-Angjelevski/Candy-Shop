@@ -27,7 +27,8 @@ export interface deleteItemType {
 
 export interface addToCheckout {
   type: typeof ADD_TO_CHECKOUT,
-  fullCart: CartType[]
+  fullCart: CartType[],
+  total: number
 }
 
 
