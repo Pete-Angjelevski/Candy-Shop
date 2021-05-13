@@ -17,21 +17,26 @@ interface CartProps {
 const Cart: React.FC<CartProps> = () => {
   const cart = useSelector((state: any) => state.cart)
 
-  let [ total, setTotal ] = useState<number>(0)
+  const [ total, setTotal ] = useState<number>(0)
   const [items, setItems ] = useState<CartType[]>(cart)
 
   useEffect((): void => {
+    
+    handleTotal() 
     setItems(cart)
-    const arr = items.map((item: CartType) => item.price)
-    const reducer = (accumulator: number, currentValue: number): number => accumulator + currentValue
-    const totalPrice = arr.reduce(reducer)
-    
-    setTotal(totalPrice)
-    
+
   },[cart] )
+
+  function handleTotal(): void {
+      let arr = cart.map((item: CartType) => item.price)
+      const reducer = (accumulator: number, currentValue: number): number => accumulator + currentValue
+      const totalPrice = arr.reduce(reducer) 
+      setTotal(totalPrice)
+  }
 
   function handleDelete(id: number): void {
     dispatch(deleteItem(id))
+    
   }
 
   function handleEditChange (id: number, e: React.ChangeEvent<HTMLInputElement>): void {
