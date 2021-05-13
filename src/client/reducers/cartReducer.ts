@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DELETE_ITEM } from '../actions/cartActions'
+import { ADD_TO_CART, DELETE_ITEM, EDIT_ITEM } from '../actions/cartActions'
 import { CartActionTypes } from '../types/actionTypes'
 import { CandyType } from '../types/appSpecificTypes' 
  
@@ -30,6 +30,10 @@ const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ):
 
       case DELETE_ITEM:
         return state.filter(item => item.id !== action.id)
+
+      
+      case EDIT_ITEM:
+        return action.candy
 
     default:
       return state

@@ -22,7 +22,7 @@ export function addToCart (
   }
 }
 
-export function editItem (candy: CandyType): AppActionTypes {
+export function editItem (candy: any): AppActionTypes {
   return {
     type: EDIT_ITEM,
     candy
