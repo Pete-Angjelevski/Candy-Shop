@@ -3,7 +3,7 @@ import { CartActionTypes } from '../types/actionTypes'
 import { CartType } from '../types/appSpecificTypes' 
  
 
-const cartReducerDefaultState: Partial<CartType[]> = []
+const cartReducerDefaultState: CartType[] = []
 
 const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ): any => {
   ADD_TO_CART
