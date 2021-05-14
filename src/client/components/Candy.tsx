@@ -5,6 +5,8 @@ import { addToCart } from '../actions/cartActions'
 import { dispatch } from '../store'
 import { CandyType } from '../types/appSpecificTypes'
 
+// STYLES 
+import '../scss/Candy.scss'
 
 
 

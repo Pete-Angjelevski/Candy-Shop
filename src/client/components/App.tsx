@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom'
 
-//  DATA
-import candyData from '../../data/candy'
+//STYLES
+import '../scss/app.scss'
+
 
 // COMPONENTS
 import Header from './Header'
