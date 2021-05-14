@@ -4,7 +4,7 @@
   color: $dark-pink;
   font-family: $font-stack;
   text-align: center;
-  font-size: 50px;
+  font-size: 500px;
   background-color: $orange;
   padding: 10px;
   margin: 0 0 20px 0;
@@ -24,6 +24,7 @@
 
     
     .link {
+      font-family: "nunito";
       color: inherit;
       font-size: 1.5rem;
       margin: 50px;

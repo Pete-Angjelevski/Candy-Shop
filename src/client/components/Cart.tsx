@@ -8,6 +8,10 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addToCheckout } from '../actions/checkoutActions'
 
+// STYLES
+import '../scss/Cart.scss'
+
+
 interface CartProps {
 
 }
@@ -60,7 +64,8 @@ const Cart: React.FC<CartProps> = () => {
 
 
   return (
-    <div>
+    <div className="cartWrapper">
+      <div className="cartContainer">
       <table>
         <thead>
           <tr>
@@ -78,8 +83,8 @@ const Cart: React.FC<CartProps> = () => {
                 <td>{name}</td>
                 <td><input  value={quantity} onChange={(e) => handleEditChange(id, e)} /></td>
                 <td>{price}</td>
-                <td><button onClick={setEdit}>Update</button></td>
-                <td><button onClick={() => handleDelete(id)}>Remove</button></td>
+                <td><button className="update" onClick={setEdit}>Update</button></td>
+                <td><button className="update" onClick={() => handleDelete(id)}>Remove</button></td>
                 
               </tr>
             )
@@ -87,10 +92,11 @@ const Cart: React.FC<CartProps> = () => {
         </tbody>
       </table>
       <div>
-        <p>Total: {total}</p>
+        <p>Total: ${total}</p>
         <Link to="/checkout">
-          <button onClick={handleCheckoutClick}>Proceed to Checkout</button>
+          <button className="checkout" onClick={handleCheckoutClick}>Proceed to Checkout</button>
         </Link>
+      </div>
       </div>
     </div>
   )

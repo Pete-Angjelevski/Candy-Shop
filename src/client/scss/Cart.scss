@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+
+.cartWrapper {
+  @extend %divContainer;
+  background-color: $orange;
+  width: 90%;
+
+  .cartContainer {
+
+    @extend %divContainer;
+    width: 80%;
+
+
+    table { 
+      width: 100%;
+      color: $dark-pink;
+      thead {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+    }
+  
+    .update {
+      color: $dark-pink;
+      cursor: pointer;
+      border: none;
+      padding: 5px;
+      background-color: $blue;
+      border-radius: 30px;
+      font-weight: 600;
+      margin: 15px auto;
+    }
+  
+  
+    .checkout {
+      @extend %button;
+    }
+  
+  
+    .checkout:hover {
+      @extend %butHover;
+    }
+  
+
+
+  }
+
+}

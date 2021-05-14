@@ -1,13 +1,7 @@
 @import "../scss/variables.scss";
 
 .candywrapper {
-  color: $dark-pink;
-  background-color: $yellow;
-  width: 80%;
-  border: 3px solid $light-pink;
-  border-radius: 15px;
-  margin: 10px auto;
-  padding: 20px;
+  @extend %divContainer;
 
 
   .img {
@@ -34,38 +28,11 @@
 
 
   button {
-    color: $dark-pink;
-    display: block;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background-color: $blue;
-    width: 300px;
-    height: 70px;
-    border-radius: 30px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-decoration: underline;
-    background-size: 100% 100%;
-    box-shadow: 0 0 0 7px $blue inset;
-    margin: 15px auto;
+    @extend %button;
   }
   
   button:hover {
-    background-image: linear-gradient(
-      145deg,
-      transparent 10%,
-      $light-blue 10% 20%,
-      transparent 20% 30%,
-      $light-blue 30% 40%,
-      transparent 40% 50%,
-      $light-blue 50% 60%,
-      transparent 60% 70%,
-      $light-blue 70% 80%,
-      transparent 80% 90%,
-      $light-blue 90% 100%
-    );
-    animation: background 3s linear infinite;
+    @extend %butHover;
   }
 
   @keyframes background {
