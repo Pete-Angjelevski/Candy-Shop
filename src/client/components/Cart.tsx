@@ -71,8 +71,8 @@ const Cart: React.FC<CartProps> = () => {
           <tr>
             <td>Candy</td>
             <td>Quantity</td>
-            <td>Cost</td>
             <td>Update QTY</td>
+            <td>Cost</td>
             <td>Remove</td>
           </tr>
         </thead>
@@ -82,8 +82,8 @@ const Cart: React.FC<CartProps> = () => {
               <tr key={id}>
                 <td>{name}</td>
                 <td><input  value={quantity} onChange={(e) => handleEditChange(id, e)} /></td>
-                <td>{price}</td>
                 <td><button className="update" onClick={setEdit}>Update</button></td>
+                <td>${price}</td>
                 <td><button className="update" onClick={() => handleDelete(id)}>Remove</button></td>
                 
               </tr>

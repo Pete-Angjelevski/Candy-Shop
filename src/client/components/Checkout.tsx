@@ -5,6 +5,10 @@ import { CartType } from '../types/appSpecificTypes'
 import { connect } from 'react-redux'
 
 
+
+// STYLES
+import '../scss/Checkout.scss'
+
 interface CheckoutProps {
 
 }
@@ -18,10 +22,16 @@ const Checkout: React.FC<CheckoutProps> = () => {
     setItems(fullCart)
   }, [fullCart] )
 
+  /* Split order summary and paypal portal
+  into two seperate components within checkout
+  when ready*/
 
   return (
-    <div>
-      <h2>*Also add payment service portal with PayPal*</h2>
+    <div className="checkout"> 
+      <div className="portal">
+        <h2>*Also add payment service portal with PayPal*</h2>
+      </div>
+      <div className="summary">
       <h3>Order Summary:</h3>
       <ul>
       { 
@@ -35,6 +45,7 @@ const Checkout: React.FC<CheckoutProps> = () => {
         }
       </ul>
       <p>Total: {total}</p>
+      </div>
     </div>
   )
 }

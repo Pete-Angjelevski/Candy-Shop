@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.checkout {
+  @extend %divContainer;
+  background-color: $orange;
+  position: relative;
+  height: 60%;
+
+  h3 {
+    text-decoration: underline;
+  }
+
+
+
+  .portal {
+    @extend %divContainer;
+    position: absolute;
+    left: 20px;
+    width: 40%;
+    height: 80%;
+
+  }
+  
+  .summary{
+    @extend %divContainer;
+    position: absolute;
+    right: 20px;
+    height: 80%;
+    width: 40%;
+    overflow: scroll;
+  }
+  
+
+
+
+
+}
