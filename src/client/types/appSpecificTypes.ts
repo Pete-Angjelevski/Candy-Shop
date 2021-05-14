@@ -15,7 +15,8 @@ export interface CartType {
 	id: number,
 	name: string,
 	price: number,
-	quantity: number
+	quantity: number,
+	img: string
 }
 
 export interface CheckoutType {

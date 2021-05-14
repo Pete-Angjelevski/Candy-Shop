@@ -40,6 +40,7 @@ const Checkout: React.FC<CheckoutProps> = () => {
               <p>{item.name}</p>
               <p>${item.price}</p>
               <p>QTY: {item.quantity}</p>
+              <img src={item.img}/>
             </li>)
           })   
         }

@@ -16,7 +16,7 @@ const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ):
         state.find(item => item.id === action.id)
           ? state.map(item => (
             item.id === action.id
-              ? { id: item.id, name: item.name, quantity: item.quantity + 1, price: item.price + action.price }
+              ? { id: item.id, name: item.name, quantity: item.quantity + 1, price: item.price + action.price, img: action.img}
               : item
           ))
           : [...state,
@@ -24,7 +24,8 @@ const cartReducer = (state = cartReducerDefaultState, action: CartActionTypes ):
               id: action.id,
               name: action.name,
               quantity: action.quantity,
-              price: action.price
+              price: action.price,
+              img: action.img
             }]
        )
 

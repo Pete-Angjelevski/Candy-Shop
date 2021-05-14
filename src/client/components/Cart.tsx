@@ -48,7 +48,9 @@ const Cart: React.FC<CartProps> = () => {
       ? { id: item.id, 
           name: item.name, 
           price: (item.price/ item.quantity) * Number(e.target.value), 
-          quantity: Number(e.target.value)}
+          quantity: Number(e.target.value),
+          img: item.img
+        }
       : item) 
 
       setItems(arr)

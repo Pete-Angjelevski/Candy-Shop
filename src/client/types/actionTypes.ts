@@ -10,6 +10,7 @@ export interface addToCartType {
   name: string
   price: number
   quantity: number
+  img: string
 }
 
 export interface editItemType {

@@ -19,7 +19,7 @@ function Candy (props: { details: CandyType}) {
 
 
     function handleAdd ():void {
-      dispatch(addToCart(id, name, price))
+      dispatch(addToCart(id, name, price, img))
     }
 
     return (

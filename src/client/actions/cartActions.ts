@@ -9,7 +9,8 @@ export function addToCart (
   id: number,
   name: string,
   price: number,
-  quantity: number = 1
+  img: string,
+  quantity: number = 1,
 ) : AppActionTypes  {
 
   return {
@@ -17,7 +18,8 @@ export function addToCart (
     id,
     name,
     quantity,
-    price
+    price,
+    img
 
   }
 }
