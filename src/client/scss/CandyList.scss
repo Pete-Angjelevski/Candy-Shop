@@ -1,0 +1,15 @@
+@import "../scss/variables.scss";
+
+
+.CandyListWrapper {
+  background-color: $orange;
+  width: 80%;
+  margin: 0 auto;
+  border: 3px solid $light-pink;
+  border-radius: 15px;
+
+  li {
+    padding: 0;
+    list-style: none;
+  }
+}

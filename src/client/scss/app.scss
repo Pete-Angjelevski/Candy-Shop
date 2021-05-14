@@ -1,3 +1,7 @@
+// VARIABLE IMPORT
+@import "./variables.scss";
+
+
 $theme-colors: (
     'primary': #0091ea //Covalence Blue!  :D
 );
@@ -6,5 +10,5 @@ $theme-colors: (
 
 
 body {
-    background-color: black;
+    background-color: $grey;
 }

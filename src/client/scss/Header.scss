@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.headerwrapper {
+  color: $dark-pink;
+  font-family: $font-stack;
+  text-align: center;
+  font-size: 50px;
+  background-color: $orange;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  border: 3px solid $light-pink;
+  border-radius: 5px;
+  text-decoration: underline;
+
+  .headercontainer{
+
+    background-color: $yellow;
+    border: 3px solid $light-pink;
+    border-radius: 15px;
+    width: 70%;
+    margin: 0 auto;
+
+
+
+    
+    .link {
+      color: inherit;
+      font-size: 1.5rem;
+      margin: 50px;
+      text-decoration: underline;
+    }
+
+    .link :hover {
+      font-size: 4rem;
+    }
+  }
+}

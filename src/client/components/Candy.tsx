@@ -15,7 +15,7 @@ function Candy (props: { details: CandyType}) {
   
 
 
-    const {id, name, price, vegan, gf, description} = props.details
+    const {img, id, name, price, vegan, gf, description} = props.details
 
 
     function handleAdd ():void {
@@ -23,12 +23,15 @@ function Candy (props: { details: CandyType}) {
     }
 
     return (
-      <div>
-        <p>{name}</p>
-        <p>Price: ${price}</p>
-        <p>{description}</p>
-        { vegan ? <p>Vegan: ✔</p> : <p>Vegan: ✖  </p> }
-        { gf ? <p>Gluten Free: ✔</p> : <p>Gluten Free: ✖  </p> }
+      <div className="candywrapper">
+        <img className="img" src={img}/>
+        <div className="text">
+          <h5 className="name">{name}</h5>
+          <p>Price: ${price}</p>
+          <p>{description}</p>
+          { vegan ? <p className="diet">Vegan: ✔</p> : <p className="diet">Vegan: ✖  </p> }
+          { gf ? <p className="diet">Gluten Free: ✔</p> : <p className="diet">Gluten Free: ✖  </p> }
+        </div>
         <button onClick={handleAdd}>Add to Cart</button>
       </div>
     )

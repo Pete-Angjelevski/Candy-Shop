@@ -1,6 +1,7 @@
 
 
 export interface CandyType {
+	img: string,
   id: number,
 	name: string,
 	price: number,
