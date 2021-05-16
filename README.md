@@ -4,8 +4,8 @@ Technology Utilised:
 
 - React + Redux + React Hooks + React Routing
 - TypeScript
-- Style to be added with SASS
-- PayPal portal to be added
+- Style added with SASS
+- PayPal portal to be added**
 
 
 To spin up the app:
@@ -19,6 +19,14 @@ To spin up the app:
 Bugs*
   - cart page currently crashes when there are no items in redux cart due to reducer function calculating total
   - img not aligned correctly in Order Summary in checkout component ( FIXED )
+  - 
+  
+ScreenShots:
+
+![CandyList Screen](public/images/CandyList.png)
+![Cart Screen](public/images/Cart.png)
+![Checkout Screen](public/images/CheckOut.png)
+![Redux](public/images/Redux.png)
 
 ## GOAL 1 (COMPLETED)
 
