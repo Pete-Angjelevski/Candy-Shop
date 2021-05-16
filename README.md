@@ -18,6 +18,7 @@ To spin up the app:
 
 Bugs*
   - cart page currently crashes when there are no items in redux cart due to reducer function calculating total
+  - img not aligned correctly in Order Summary in checkout component
 
 ## GOAL 1 (COMPLETED)
 
