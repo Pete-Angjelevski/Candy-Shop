@@ -23,9 +23,16 @@ Bugs*
   
 ScreenShots:
 
+CandyList Screen . . 
 ![CandyList Screen](public/images/CandyList.png)
+
+Cart Screen . .
 ![Cart Screen](public/images/Cart.png)
+
+Checkout Screen . . 
 ![Checkout Screen](public/images/CheckOut.png)
+
+Redux . . 
 ![Redux](public/images/Redux.png)
 
 ## GOAL 1 (COMPLETED)
