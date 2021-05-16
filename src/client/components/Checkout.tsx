@@ -36,7 +36,7 @@ const Checkout: React.FC<CheckoutProps> = () => {
       <ul>
       { 
         items.map((item: CartType) => {
-            return (<li key={item.id}>
+            return (<li className="itemContainer" key={item.id}>
               <p>{item.name}</p>
               <p>${item.price}</p>
               <p>QTY: {item.quantity}</p>
