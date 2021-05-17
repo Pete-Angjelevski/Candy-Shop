@@ -8,10 +8,12 @@ import { CandyType } from '../types/appSpecificTypes'
 // STYLES 
 import '../scss/Candy.scss'
 
+interface CandyProps {
+  details: CandyType
+}
 
 
-
-function Candy (props: { details: CandyType}) {
+const Candy: React.FC<CandyProps> = (props) => {
   
 
 

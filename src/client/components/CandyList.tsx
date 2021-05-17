@@ -9,10 +9,12 @@ import '../scss/CandyList.scss'
 import Candy from './Candy'
 import candyData from '../../data/candy'
 
+interface CandyListProps {
+
+}
 
 
-
- export default function CandyList () {
+const CandyList: React.FC<CandyListProps> = () => {
     return (
         <div className="CandyListWrapper">
           <ul>
@@ -27,3 +29,5 @@ import candyData from '../../data/candy'
         </div>
           )
  }
+
+ export default CandyList

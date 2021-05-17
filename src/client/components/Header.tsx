@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 // STYLES
 import '../scss/Header.scss'
 
-export default function Header () {
+interface HeaderProps {
+
+}
+
+ const Header: React.FC<HeaderProps> = () => {
 
 
   return (
@@ -17,3 +21,5 @@ export default function Header () {
     </div>
   )
 }
+
+export default Header

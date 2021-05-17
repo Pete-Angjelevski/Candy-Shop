@@ -11,8 +11,12 @@ import CandyList from './CandyList'
 import Cart from './Cart'
 import Checkout from './Checkout'
 
+interface AppProps {
 
-export default function App  () {
+}
+
+
+const App: React.FC<AppProps>  =  () => {
 
 
 	return (
@@ -26,5 +30,5 @@ export default function App  () {
 };
 
 
-
+export default App
 
