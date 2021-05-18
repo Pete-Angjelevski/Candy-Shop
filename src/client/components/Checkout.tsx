@@ -32,7 +32,8 @@ const Checkout: React.FC<CheckoutProps> = () => {
   return (
     <div className="checkout"> 
       <div className="portal">
-        <Form />
+        <Form total={total}/>
+        <p>Total: {total}</p>
       </div>
       <div className="summary">
       <h3>Order Summary:</h3>
@@ -43,7 +44,6 @@ const Checkout: React.FC<CheckoutProps> = () => {
           })   
         }
       </ul>
-      <p>Total: {total}</p>
       </div>
     </div>
   )
