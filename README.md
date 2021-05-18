@@ -1,11 +1,16 @@
 ### Pete's Candy Shop
 
+Description: 
+
+Front end shopping cart app I've built to refine my skill in the chosen tech but also expand my knowledge by implementing Stripe payment system which is something new to me.
+Screen shots of app below . . .
+
 Technology Utilised:
 
 - React + Redux + React Hooks + React Routing
 - TypeScript
 - Style added with SASS
-- PayPal portal to be added**
+- Stripe
 
 
 To spin up the app:
@@ -20,7 +25,7 @@ To spin up the app:
 Bugs*
   - cart page currently crashes when there are no items in redux cart due to reducer function calculating total
   - img not aligned correctly in Order Summary in checkout component ( FIXED )
-  - 
+
   
 ScreenShots:
 
@@ -60,9 +65,12 @@ Build out Checkout Component and attach CheckoutReducer
 
 ## GOAL 5 
 
+Implement Stripe payment service
+
+
+## GOAL 5.5 (ONGOING)
+
 Style Components with Sass
 
 
-## STRETCH
 
-Add Paypal portal to checkout for payment confirmation
