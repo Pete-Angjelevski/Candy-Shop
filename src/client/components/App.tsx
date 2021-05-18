@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom'
+import {StripeProvider, Elements} from 'react-stripe-elements'
+
 
 //STYLES
 import '../scss/app.scss'

@@ -5,6 +5,9 @@ import { CartType } from '../types/appSpecificTypes'
 import { connect } from 'react-redux'
 
 
+// COMPONENTS
+import Order from './Order'
+
 
 // STYLES
 import '../scss/Checkout.scss'
@@ -22,26 +25,21 @@ const Checkout: React.FC<CheckoutProps> = () => {
     setItems(fullCart)
   }, [fullCart] )
 
-  /* Split order summary and paypal portal
+  /* Split order summary and stripe portal
   into two seperate components within checkout
   when ready*/
 
   return (
     <div className="checkout"> 
       <div className="portal">
-        <h2>*Also add payment service portal with PayPal*</h2>
+        <h2>*Also add payment service portal with Stripe*</h2>
       </div>
       <div className="summary">
       <h3>Order Summary:</h3>
       <ul>
       { 
         items.map((item: CartType) => {
-            return (<li className="itemContainer" key={item.id}>
-              <p>{item.name}</p>
-              <p>${item.price}</p>
-              <p>QTY: {item.quantity}</p>
-              <img src={item.img}/>
-            </li>)
+            return <Order item={item} />
           })   
         }
       </ul>
