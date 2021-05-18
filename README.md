@@ -12,6 +12,7 @@ To spin up the app:
 
 * Clone the repo into your drive
 * npm i via chosen command line to install dependencies
+* add stripe dev secret key to routes.js file
 * npm run dev to spin up server 
 * Visit https://localhost:3000 to view app. 
 
