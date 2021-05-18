@@ -23,6 +23,7 @@
     "@types/superagent": "^4.1.11",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.1.1",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
