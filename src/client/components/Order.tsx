@@ -11,10 +11,10 @@ interface OrderProps {
 
 
 const Order: React.FC<OrderProps> = (props) => {
-  const {id, name, price, quantity, img} = props.item
+  const { name, price, quantity, img} = props.item
 
   return (
-    <li className="itemContainer" key={id}>
+    <li className="itemContainer" >
       <p>{name}</p>
       <p>${price}</p>
       <p>QTY: {quantity}</p>

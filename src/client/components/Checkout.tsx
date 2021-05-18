@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 // COMPONENTS
 import Order from './Order'
-
+import Form from './Form'
 
 // STYLES
 import '../scss/Checkout.scss'
@@ -32,14 +32,14 @@ const Checkout: React.FC<CheckoutProps> = () => {
   return (
     <div className="checkout"> 
       <div className="portal">
-        <h2>*Also add payment service portal with Stripe*</h2>
+        <Form />
       </div>
       <div className="summary">
       <h3>Order Summary:</h3>
       <ul>
       { 
         items.map((item: CartType) => {
-            return <Order item={item} />
+            return <Order key={item.id} item={item} />
           })   
         }
       </ul>
