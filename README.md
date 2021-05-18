@@ -3,7 +3,7 @@
 Description: 
 
 Front end shopping cart app I've built to refine my skill in the chosen tech but also expand my knowledge by implementing Stripe payment system which is something new to me.
-
+Screen shots of app below . . .
 
 Technology Utilised:
 
