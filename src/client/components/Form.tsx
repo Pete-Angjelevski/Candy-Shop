@@ -13,7 +13,7 @@ interface FormProps extends ReactStripeElements.InjectedStripeProps {
 
 const Form: React.FC<FormProps> = (props) => {
 
-  const total = props.total
+  const total = props.total.toString()
   const [name, setName ] = useState<string>('')
 
 
@@ -25,11 +25,16 @@ const Form: React.FC<FormProps> = (props) => {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>): Promise<void> {
     e.preventDefault()
-    console.log(name)
-
+    
     try {
-      let token = await props.stripe.createToken({name})
-      console.log(token)
+      let {token} = await props.stripe.createToken({name})
+      await fetch('/api/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({token, total})
+      })
     } catch (e) {
       throw e
     }
@@ -60,6 +65,4 @@ const Form: React.FC<FormProps> = (props) => {
 
 }
 
-
-// REMEMBER TO WRAP FORM WITH INJECT STRIPE
 export default injectStripe(Form)

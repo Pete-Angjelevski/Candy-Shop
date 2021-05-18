@@ -5,6 +5,7 @@ import apiRouter from './routes';
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.json())
 app.use(apiRouter);
 
 const port = process.env.PORT || 3000;
