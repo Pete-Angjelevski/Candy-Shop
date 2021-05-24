@@ -24,19 +24,19 @@ const Cart: React.FC<CartProps> = () => {
   const [items, setItems ] = useState<CartType[]>(cart)
 
   useEffect((): void => {
+    let totalPrice: number = 0
     
-    handleTotal() 
+    cart.forEach((item: CartType) => {
+      totalPrice += item.price
+    })
+    
+    setTotal(totalPrice)
     setItems(cart)
+
 
   },[cart] )
 
-  function handleTotal(): void {
-      let arr = cart.map((item: CartType) => item.price)
-      const reducer = (accumulator: number, currentValue: number): number => accumulator + currentValue
-      const totalPrice = arr.reduce(reducer) 
-      setTotal(totalPrice)
-
-  }
+ 
 
   function handleDelete(id: number): void {
     dispatch(deleteItem(id))
