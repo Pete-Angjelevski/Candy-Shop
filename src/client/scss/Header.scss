@@ -11,10 +11,12 @@
   border: 3px solid $light-pink;
   border-radius: 5px;
   text-decoration: underline;
+  position: sticky;
+  top: 0;
+  
 
   .headercontainer{
-    position: sticky;
-    top: 0;
+ 
     background-color: $yellow;
     border: 3px solid $light-pink;
     border-radius: 15px;
@@ -32,8 +34,8 @@
       text-decoration: underline;
     }
 
-    .link :hover {
-      font-size: 4rem;
+    .link:hover {
+      font-size: 2rem;
     }
   }
 }

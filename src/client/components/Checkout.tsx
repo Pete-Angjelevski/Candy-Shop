@@ -25,15 +25,11 @@ const Checkout: React.FC<CheckoutProps> = () => {
     setItems(fullCart)
   }, [fullCart] )
 
-  /* Split order summary and stripe portal
-  into two seperate components within checkout
-  when ready*/
-
   return (
     <div className="checkout"> 
       <div className="portal">
         <Form total={total}/>
-        <p>Total: {total}</p>
+        <p>Total: {parseFloat(total.toString()).toFixed(2)}</p>
       </div>
       <div className="summary">
       <h3>Order Summary:</h3>
