@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
-
+import { CartType } from '../types/appSpecificTypes'
 
 // STYLES
 import '../scss/Header.scss'
@@ -14,26 +14,31 @@ interface HeaderProps {
 
  const Header: React.FC<HeaderProps> = () => {
 
-  let [ qty, setQty ] = useState<number>(0)
+  
+  const [ cartCount, setCartCount ] = useState<number>(0)
 
   const cart = useSelector((state: any) => state.cart)
 
   useEffect(() => {
+    let count: number = 0
 
-    for (let i = 0; i< cart.length; i+= 1) {
-      setQty(+ cart[i].quantity)
-    }
-   
+    cart.forEach((item: CartType) => {  
+      count += item.quantity
+
+    })
+
+    setCartCount(count)
+
     
 
-  }, [cart])
+  }, [cart, cartCount])
 
   return (
     <div className="headerwrapper">
       <div className="headercontainer">
         <h1>Pete's Candy Store</h1>
         <Link className="link" to='/'>Shop</Link>
-        <Link className="link" to='/cart'>Cart({qty})</Link>
+        <Link className="link" to='/cart'>Cart({cartCount})</Link>
       </div>
     </div>
   )
