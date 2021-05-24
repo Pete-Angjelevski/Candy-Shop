@@ -13,7 +13,8 @@
   text-decoration: underline;
 
   .headercontainer{
-
+    position: sticky;
+    top: 0;
     background-color: $yellow;
     border: 3px solid $light-pink;
     border-radius: 15px;

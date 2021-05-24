@@ -1,10 +1,9 @@
 import * as React from 'react'
 import {useState, useEffect} from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, connect } from 'react-redux'
 import { CartType } from '../types/appSpecificTypes'
 import { deleteItem, editItem } from '../actions/cartActions'
 import { dispatch } from '../store'
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addToCheckout } from '../actions/checkoutActions'
 
@@ -21,7 +20,7 @@ interface CartProps {
 const Cart: React.FC<CartProps> = () => {
   const cart = useSelector((state: any) => state.cart)
 
-  const [ total, setTotal ] = useState<number>(0)
+  let [ total, setTotal ] = useState<number>(0)
   const [items, setItems ] = useState<CartType[]>(cart)
 
   useEffect((): void => {
@@ -36,6 +35,7 @@ const Cart: React.FC<CartProps> = () => {
       const reducer = (accumulator: number, currentValue: number): number => accumulator + currentValue
       const totalPrice = arr.reduce(reducer) 
       setTotal(totalPrice)
+
   }
 
   function handleDelete(id: number): void {
