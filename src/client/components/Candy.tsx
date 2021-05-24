@@ -29,7 +29,7 @@ const Candy: React.FC<CandyProps> = (props) => {
         <img className="img" src={img}/>
         <div className="text">
           <h5 className="name">{name}</h5>
-          <p>Price: ${parseFloat(price).toFixed(2)}</p>
+          <p>Price: ${parseFloat(price.toString()).toFixed(2)}</p>
           <p>{description}</p>
           { vegan ? <p className="diet">Vegan: ✔</p> : <p className="diet">Vegan: ✖  </p> }
           { gf ? <p className="diet">Gluten Free: ✔</p> : <p className="diet">Gluten Free: ✖  </p> }

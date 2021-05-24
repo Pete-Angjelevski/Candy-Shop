@@ -55,7 +55,7 @@ const Form: React.FC<FormProps> = (props) => {
         <CardElement className="p-2 border border-dark"/>
 
         <label htmlFor="amount">Amount:</label>
-        <input id="amount" value={total} readOnly/>
+        <input id="amount" value={parseFloat(total.toString()).toFixed(2)} readOnly/>
 
         <button>Purchase!</button>
       </form>
