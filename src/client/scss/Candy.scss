@@ -6,7 +6,7 @@
 
   .img {
     float: left;
-    height: 50%;
+    height:37%;
     border-radius: 15px;
   }
 
@@ -30,6 +30,7 @@
 
   button {
     @extend %button;
+
   }
   
   button:hover {
@@ -49,4 +50,9 @@
 }
 
 
+@media (max-width: 500px) {
 
+  .candywrapper {
+    width: 90%;
+  }
+}

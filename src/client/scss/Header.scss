@@ -39,3 +39,19 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+
+  .headerwrapper{
+
+    .headercontainer{
+      width: 85%;
+    }
+
+    .link {
+      margin: 20px;
+    }
+
+  }
+
+}

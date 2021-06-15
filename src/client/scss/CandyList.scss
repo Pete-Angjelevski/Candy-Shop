@@ -13,3 +13,10 @@
     list-style: none;
   }
 }
+
+@media (max-width: 500px) {
+
+  .CandyListWrapper {
+    width: 100%;
+  }
+}

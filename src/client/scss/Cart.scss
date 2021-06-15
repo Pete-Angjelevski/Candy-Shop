@@ -48,3 +48,35 @@
   }
 
 }
+
+@media (max-width: 500px) {
+
+  .cartWrapper {
+
+    width: 100%;
+
+    .cartContainer{
+
+      width: 95%;
+      font-size: 0.8rem;
+
+
+      table {
+
+        width: 80%;
+
+        .thead {
+          font-size: 0.9rem;
+        }
+        
+        input {
+          width: 50%;
+        }
+
+      }
+
+    }
+    
+  }
+
+}
