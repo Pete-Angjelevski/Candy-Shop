@@ -64,6 +64,7 @@ const Cart: React.FC<CartProps> = () => {
     dispatch(addToCheckout(items, total))
   }
 
+ 
 
   return (
     <div className="cartWrapper">
@@ -84,9 +85,25 @@ const Cart: React.FC<CartProps> = () => {
               <tr key={id}>
                 <td>{name}</td>
                 <td><input  value={quantity} onChange={(e) => handleEditChange(id, e)} /></td>
-                <td><button className="update" onClick={setEdit}>Update</button></td>
+                <td>
+                  <button className="update" onClick={setEdit}>
+                    {window.innerWidth < 600 
+                    ? <span className="material-icons">
+                        update
+                      </span>
+                    : 'Update'} 
+                  </button>
+                </td>
                 <td>${parseFloat(price.toString()).toFixed(2)}</td>
-                <td><button className="update" onClick={() => handleDelete(id)}>Remove</button></td>
+                <td>
+                  <button className="update" onClick={() => handleDelete(id)}>
+                    {window.innerWidth < 600 
+                    ? <span className="material-icons">
+                        delete_forever
+                      </span> 
+                    : 'Remove'}  
+                  </button>
+                </td>
                 
               </tr>
             )
