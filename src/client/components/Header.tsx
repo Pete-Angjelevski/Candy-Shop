@@ -34,8 +34,8 @@ interface HeaderProps {
   }, [cart, cartCount])
 
   return (
-    <div className="headerwrapper">
-      <div className="headercontainer">
+    <div className="headerWrapper">
+      <div className="headerContainer">
         <h1>Pete's Candy Store</h1>
         <Link className="link" to='/'>Shop</Link>
         <Link className="link" to='/cart'>Cart({cartCount})</Link>

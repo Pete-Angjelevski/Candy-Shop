@@ -16,7 +16,7 @@ interface CandyListProps {
 
 const CandyList: React.FC<CandyListProps> = () => {
     return (
-        <div className="CandyListWrapper">
+        <div className="candyListWrapper">
           <ul>
             {candyData.map((item: CandyType) => {
               return (

@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.headerwrapper {
+.headerWrapper {
   color: $dark-pink;
   font-family: $font-stack;
   text-align: center;
@@ -15,7 +15,7 @@
   top: 0;
   
 
-  .headercontainer{
+  .headerContainer{
  
     background-color: $yellow;
     border: 3px solid $light-pink;
@@ -42,9 +42,9 @@
 
 @media (max-width: 600px) {
 
-  .headerwrapper{
+  .headerWrapper{
 
-    .headercontainer{
+    .headerContainer{
       width: 85%;
     }
 

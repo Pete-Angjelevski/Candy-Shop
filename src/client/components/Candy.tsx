@@ -25,7 +25,7 @@ const Candy: React.FC<CandyProps> = (props) => {
     }
 
     return (
-      <div className="candywrapper">
+      <div className="candyWrapper">
         <img className="img" src={img}/>
         <div className="text">
           <h5 className="name">{name}</h5>

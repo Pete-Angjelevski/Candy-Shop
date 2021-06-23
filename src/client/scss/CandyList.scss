@@ -1,7 +1,7 @@
 @import "../scss/variables.scss";
 
 
-.CandyListWrapper {
+.candyListWrapper {
   background-color: $orange;
   width: 80%;
   margin: 0 auto;
@@ -16,7 +16,7 @@
 
 @media (max-width: 600px) {
 
-  .CandyListWrapper {
+  .candyListWrapper {
     width: 100%;
   }
 }
